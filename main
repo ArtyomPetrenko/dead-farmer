@@ -1,9 +1,21 @@
 while True:
 	for i in range(3):
-		for k in range(2):
+		#wood
+		for k in range(1):
 			if can_harvest():
 				harvest()
 				plant(Entities.Bush)
+				move(North)
+			else:
+				move(North)
+		#carrot
+		for k in range(1):
+			if can_harvest():
+				#not available yet
+				#if Grounds == Grassland:
+				#till() - uncomment for first cycle
+				harvest()
+				plant(Entities.Carrot)
 				move(North)
 			else:
 				move(North)
@@ -11,3 +23,5 @@ while True:
 			harvest()
 			move(East)
 			move(North)
+
+		
