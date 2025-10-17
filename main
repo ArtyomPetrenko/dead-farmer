@@ -1,0 +1,13 @@
+while True:
+	for i in range(3):
+		for k in range(2):
+			if can_harvest():
+				harvest()
+				plant(Entities.Bush)
+				move(North)
+			else:
+				move(North)
+		if can_harvest():
+			harvest()
+			move(East)
+			move(North)
