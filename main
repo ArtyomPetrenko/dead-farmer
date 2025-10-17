@@ -12,8 +12,8 @@ while True:
 		for k in range(1):
 			if can_harvest():
 				#not available yet
-				#if Grounds == Grassland:
-				#till() - uncomment for first cycle
+				if get_ground_type() != Grounds.Soil:
+					till()
 				harvest()
 				plant(Entities.Carrot)
 				move(North)
@@ -23,5 +23,3 @@ while True:
 			harvest()
 			move(East)
 			move(North)
-
-		
